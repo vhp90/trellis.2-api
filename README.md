@@ -29,6 +29,15 @@ bash start_api.sh
 
 Then open the Lightning-provided URL for the running app.
 
+## Build behavior
+
+- Builds are stored in a workspace-local virtual environment at `.venv/`
+- Completed install steps are tracked in `.build_state/`
+- On the next run, the installer checks imports and skips steps that already succeeded
+- If a late native build step fails, the earlier successful steps are reused on retry
+
+This is designed to avoid losing a long build because one package fails near the end.
+
 ## Endpoints
 
 - `GET /health`

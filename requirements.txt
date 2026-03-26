@@ -13,8 +13,3 @@ trimesh>=4.4
 plyfile>=1.1
 imageio>=2.36
 zstandard>=0.23
-xformers>=0.0.28
-nvdiffrast @ git+https://github.com/NVlabs/nvdiffrast.git
-cumesh @ git+https://github.com/JeffreyXiang/CuMesh.git
-flex_gemm @ git+https://github.com/JeffreyXiang/FlexGEMM.git
-./o-voxel
