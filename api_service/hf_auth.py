@@ -13,6 +13,9 @@ HF_ENV_KEYS = [
 
 
 def configure_huggingface_auth() -> str | None:
+    os.environ.setdefault("HF_HUB_ENABLE_HF_TRANSFER", "1")
+    os.environ.setdefault("HF_XET_HIGH_PERFORMANCE", "1")
+
     token = None
     for key in HF_ENV_KEYS:
         value = os.getenv(key)

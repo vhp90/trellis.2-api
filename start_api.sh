@@ -10,6 +10,8 @@ export ATTN_BACKEND="${ATTN_BACKEND:-xformers}"
 export SPARSE_ATTN_BACKEND="${SPARSE_ATTN_BACKEND:-xformers}"
 export TRELLIS_LOW_VRAM="${TRELLIS_LOW_VRAM:-0}"
 export HF_HOME="${HF_HOME:-$ROOT_DIR/.cache/huggingface}"
+export HF_HUB_ENABLE_HF_TRANSFER="${HF_HUB_ENABLE_HF_TRANSFER:-1}"
+export HF_XET_HIGH_PERFORMANCE="${HF_XET_HIGH_PERFORMANCE:-1}"
 
 bash "$ROOT_DIR/install_lightning.sh"
 

@@ -19,6 +19,7 @@ TRELLIS.2 inference has been converted into a FastAPI service that is intended t
 - The service uses Lightning's own public app URL. No tunnel or ngrok is needed.
 - The API defaults to `xformers` attention, `flex_gemm` sparse convolution, and `TRELLIS_LOW_VRAM=0` so models stay on GPU for faster repeated inference.
 - If you hit GPU memory limits, you can set `TRELLIS_LOW_VRAM=1` to turn model offloading back on.
+- Hugging Face downloads are configured to use accelerated transfer by default via `hf_transfer`.
 
 ## Start in Lightning Studio
 
